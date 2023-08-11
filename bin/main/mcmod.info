@@ -1,12 +1,12 @@
 [{
   "modid": "gvc",
-  "description": "Gliby's Voice Chat mod enables in-game voice communication, as well as support for positional audio. Options are opened by PERIOD by default.",
-  "name": "Gliby's Voice Chat Mod",
-  "version": "1.3.0",
+  "description": "Hamster's Voice Chat Reloaded mod enables in-game voice communication, as well as support for positional audio. Options are opened by PERIOD by default.",
+  "name": "Hamster's Voice Chat Reloaded",
+  "version": "1.3.0-P",
   "mcversion": "1.12.2",
   "logoFile": "gvclogo.png",
-  "url": "https://minecraft.curseforge.com/projects/glibys-voice-chat-reloaded",
+  "url": "https://legacy.curseforge.com/minecraft/mc-mods/hamsters-voice-chat-reloaded",
   "updateUrl": "",
-  "authors": ["theGliby", "Icosider"],
-  "credits": "Made by theGliby, port by Ivasik"
+  "authors": ["theGliby", "Icosider","Ctech_Gameing","Coldalliance"],
+  "credits": "Made by theGliby, port by Ivasik, Maintained by Hamster Systems"
 }]

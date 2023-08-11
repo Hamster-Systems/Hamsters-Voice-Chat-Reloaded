@@ -161,7 +161,7 @@ public class VoiceChatServer {
         }
         this.voiceServer.stop();
         this.voiceServer = null;
-        this.voiceServerThread.stop();
+        this.voiceServerThread = null;
     }
 
     public void aboutToStartServer(FMLServerAboutToStartEvent e) {
