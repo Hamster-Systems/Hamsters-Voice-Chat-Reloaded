@@ -287,7 +287,7 @@ public class UdpServer {
     }
 
     public synchronized void setPort(int port) {
-        if (port >= 0 && port <= '\uffff') {
+        if (port >= 0 && port <= 65535) {
             int oldVal = this.port;
             this.port = port;
 

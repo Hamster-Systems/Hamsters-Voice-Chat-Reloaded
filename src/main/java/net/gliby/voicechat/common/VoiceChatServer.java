@@ -33,7 +33,7 @@ public class VoiceChatServer {
     private File configurationDirectory;
 
     private static boolean available(int port) {
-        if (port >= 4000 && port <= '\uffff') {
+        if (port >= 4000 && port <= 65535) {
             DatagramSocket ds = null;
 
             try (ServerSocket serverSocket = new ServerSocket(port);

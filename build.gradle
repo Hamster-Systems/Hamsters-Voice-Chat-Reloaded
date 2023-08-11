@@ -1,17 +1,38 @@
-plugins {
-    id 'idea'
-    id 'net.minecraftforge.gradle' version '5.+'
-}
-
-version = mc_version + '-' + mod_version
-group = mod_group
-
-java.toolchain.languageVersion = JavaLanguageVersion.of(8)
-
-idea {
-    module {
-        inheritOutputDirs = true
+buildscript {
+    repositories {
+        maven { url = "https://maven.minecraftforge.net/" }
+		// maven { url = "https://files.minecraftforge.net/maven" }
+        mavenCentral()
+		maven {
+    // location of the maven that hosts JEI files
+    name = "Progwml6 maven"
+    url = "https://dvs1.progwml6.com/files/maven/"
+  }
+  maven {
+    // location of a maven mirror for JEI files, as a fallback
+    name = "ModMaven"
+    url = "https://modmaven.k-4u.nl"
+  }
     }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:5.+'
+    }
+}
+// Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
+apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
+        
+apply plugin: 'net.minecraftforge.gradle'
+
+version = '1.3.0'
+group = 'net.gliby' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'Hamster Voice chat Reloaded'
+
+compileJava.options.encoding = 'UTF-8'
+tasks.withType(JavaCompile) {
+    options.fork = true
+    options.incremental = true
+    options.encoding = 'UTF-8'
 }
 
 minecraft {
